@@ -33,6 +33,15 @@
         width:100%;
         height:auto;
         margin-top: 30px;
+        animation: show 500ms ease-out;
+        transform-origin: top;
+        animation-fill-mode :backwards;
+
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: 200ms * $i;
+             }
+            }
 
         &__titre{
             font-weight: 400;
@@ -43,11 +52,13 @@
             display:inline-block;
             width:45px;
             height: 25px;
+            
         }
 
         &__ref{
             @include plats;
             display: flex;
+            
 }
  
     
@@ -71,4 +82,5 @@
     }
     }
 }
+
 

@@ -19,6 +19,56 @@ body {
   height: 100%;
 }
 
+.load {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content: space-evenly;
+  align-items: center;
+  animation: loading 2500ms ease-in forwards;
+  position: fixed;
+  z-index: 100;
+}
+.load__bar {
+  background-color: #99E2D0;
+  height: 200px;
+  width: 10%;
+  animation: bars 500ms backwards infinite alternate;
+}
+.load__bar--1 {
+  animation-delay: 100ms;
+}
+.load__bar--2 {
+  animation-delay: 200ms;
+}
+.load__bar--3 {
+  animation-delay: 300ms;
+}
+.load__bar--4 {
+  animation-delay: 400ms;
+}
+.load__bar--5 {
+  animation-delay: 500ms;
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes loading {
+  0%, 99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
 .img_restau, .rest__prev__art__img {
   object-fit: cover;
   object-position: 50% 100%;
@@ -68,6 +118,14 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes show {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
 h1 {
@@ -217,7 +275,7 @@ footer {
   border-radius: 25px;
   color: #FFF;
   background-image: linear-gradient(176deg, #ff79da 0%, #9356dc 61%);
-  transition: all 250ms ease-in;
+  transition: all 150ms ease-in;
 }
 .explore__res__button:hover {
   box-shadow: 0.825rem 0.825rem 0.825rem rgba(0, 0, 0, 0.6);
@@ -336,6 +394,18 @@ footer {
   width: 100%;
   height: auto;
   margin-top: 30px;
+  animation: show 500ms ease-out;
+  transform-origin: top;
+  animation-fill-mode: backwards;
+}
+.carte__menu__choix--1 {
+  animation-delay: 200ms;
+}
+.carte__menu__choix--2 {
+  animation-delay: 400ms;
+}
+.carte__menu__choix--3 {
+  animation-delay: 600ms;
 }
 .carte__menu__choix__titre {
   font-weight: 400;
@@ -422,7 +492,7 @@ footer {
   border-radius: 25px;
   color: #FFF;
   background-image: linear-gradient(176deg, #ff79da 0%, #9356dc 61%);
-  transition: all 250ms ease-in;
+  transition: all 150ms ease-in;
   padding: 15px 40px;
   margin-top: 50px;
   margin-bottom: 70px;
