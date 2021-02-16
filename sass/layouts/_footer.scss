@@ -1,0 +1,40 @@
+
+footer{
+    width:100%;
+    height:auto;
+    text-align: left;
+    padding-left: 25px;
+    padding-top: 25px;
+    background-color: $colour-footer;
+    
+}
+
+
+.logo_footer{
+    width:90px;
+    filter: $colour-logo-footer;
+}
+
+.contact{
+    width:100%;
+    height: auto;
+    line-height:22px;
+    padding: 20px 0;
+
+    &__bold{
+        font-weight: 500;
+        font-size: 1.3rem ; 
+        color: $colour-white;
+    }
+
+    &__reg{
+        font-weight: 400;
+        font-size: 1.3rem ; 
+        color: $colour-white;
+    }
+
+    &__icon{
+        font-size: 11px;
+        margin-right: 7px;
+    }
+}

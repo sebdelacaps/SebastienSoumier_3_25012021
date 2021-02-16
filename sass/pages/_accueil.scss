@@ -1,0 +1,150 @@
+
+.explore__res{
+    width:100%;
+    height:auto;
+    background-color: $colour-background;
+    
+    
+    &__heading{
+        padding : 30px 50px 15px 50px;
+    
+    }
+
+    &__byline{
+        padding : 0 15px 0px 15px;
+    }
+    &__button{
+        @include btn-color;
+        
+    }
+
+}
+
+.fonct{
+    width:100%;
+    height:auto;
+
+    &__div-but{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 250px;
+        padding: 0 8%;
+        margin-bottom: 50px;
+        
+        &__display{
+            position: relative;
+            padding: 25px 0;
+            border-radius:25px;
+
+            &--active{
+                background-color:lighten($colour-primary,36%)
+            }  
+        }
+
+        &__count{
+            position: absolute;
+            left:-8px;
+            @include numbers;
+        }
+
+        &__icon{
+            position: absolute;
+            left:30px;
+            color:darken($colour-background, 50%);
+            font-size: 20px;
+        
+            &--active{
+                color:$colour-primary
+            }
+        }
+
+    }
+
+    }
+
+
+    .rest{
+        width:100%;
+        height:auto;
+        background-color: $colour-background;
+        
+
+        &__prev{
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 40px;
+        
+        &__art{
+            width: 300px;
+            height: 230px;
+            background-color: $colour-white;
+            @include shadow;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            margin: 10px;;
+
+            &__pastille{
+                position: absolute;
+                width: 80px;
+                height: 25px;
+                background-color: $colour-tertiary;
+                color:darken($colour-tertiary,45%);
+                box-shadow: none;
+                right: 0;
+                margin : 10px;
+                border-radius:2px;
+            }
+
+                   
+             &__img{
+                   @extend %image;
+
+                   &--center{
+                    object-position: 50% 62%; 
+                }
+                }
+            
+
+           
+            &__byline{
+                height: 30%;
+                width: 100%;
+                display: flex;
+                
+
+                &__d{
+                    padding-left: 10px;
+                    padding-top:10px;
+                    height:100%;
+                    width:100%;
+
+                }
+
+                
+                             
+              &__h{
+                
+                @extend %heart;
+                
+
+                  }
+
+      
+
+                
+            }
+
+        
+
+            }
+
+        
+
+    }
+
+    }
