@@ -14,33 +14,16 @@
 // Pages.
 // Thèmes.
 
-
-
-
 @import "./utils/variables";
 @import "./base/base";
-
-// @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
 @import "./utils/keyframes";
-
+@import "./utils/maps";
 @import "./base/typography";
-// @import "./components/buttons";
 @import "./layouts/header";
 @import "./layouts/footer";
-// @import "./layouts/nav";
-// @import "./layouts/container";
- @import "./layouts/form";
- @import "./pages/accueil";
- @import "./pages/menu";
-// @import "./pages/about";
-// @import "./pages/project";
-
-
-
-
-
-
-
-
+@import "./layouts/form";
+@import "./pages/accueil";
+@import "./pages/menu";
+@import "./pages/loading_spinner";

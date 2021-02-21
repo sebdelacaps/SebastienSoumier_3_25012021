@@ -1,14 +1,27 @@
-$colour-primary: #9356DC;
-$colour-secondary: #FF79DA;
-$colour-tertiary: #99E2D0;
-$colour-white: #FFF;
-$colour-background:#f6f6f6;
-$shadow-size: .55rem;
-$shadow-color:#000000;
-$colour-footer:#353535;
-$colour-logo-footer:invert(100%) sepia(0%) saturate(0%) hue-rotate(83deg) brightness(106%) contrast(102%);
-$opacity:0.3;
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiary: #99e2d0;
+$colour-white: #fff;
+$colour-background: #f6f6f6;
+$shadow-size: 0.55rem;
+$shadow-color: #000000;
+$colour-footer: #353535;
+$colour-logo-footer: invert(100%) sepia(0%) saturate(0%) hue-rotate(83deg)
+  brightness(106%) contrast(102%);
+$opacity: 0.3;
 
- $gradient:linear-gradient(176deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 61%);
-$gradient2:linear-gradient(176deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 87%);
-$gradient_h:linear-gradient(42deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 60%);
+$gradient: linear-gradient(
+  176deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(147, 86, 220, 1) 61%
+);
+$gradient2: linear-gradient(
+  176deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(147, 86, 220, 1) 87%
+);
+$gradient_h: linear-gradient(
+  42deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(147, 86, 220, 1) 60%
+);

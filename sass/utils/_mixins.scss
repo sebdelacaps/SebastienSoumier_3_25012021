@@ -1,137 +1,103 @@
 @mixin btn-color {
-    position:relative;
-    margin:25px 0 50px 0;
-    padding: 15px 20px;
-    border-radius:25px;
-    color: $colour-white;
+  position: relative;
+  margin: 25px 0 50px 0;
+  padding: 15px 20px;
+  border-radius: 25px;
+  color: $colour-white;
 
-    background-image:$gradient;
-   
-    transition: all 150ms ease-in;
-   
-    
-    &:hover{
-       
-        @include shadow($shadow-size * 1.5, $shadow-color, $opacity * 2);
-        background-image: $gradient2;
-            
-    }
+  background-image: $gradient;
 
-        
+  transition: all 150ms ease-in;
 
+  &:hover {
+    @include shadow($shadow-size * 1.5, $shadow-color, $opacity * 2);
+    background-image: $gradient2;
+  }
 }
 
-
-
-
-@mixin shadow ($size:$shadow-size, $color:$shadow-color, $alpha:$opacity) {
-    box-shadow: $size $size $size rgba($color, $alpha);
+@mixin shadow($size: $shadow-size, $color: $shadow-color, $alpha: $opacity) {
+  box-shadow: $size $size $size rgba($color, $alpha);
 }
 
 @mixin numbers {
-            padding: 2px 6px;
-            background-color: $colour-primary;
-            border-radius: 50%;
-            color: $colour-white;
+  padding: 2px 6px;
+  background-color: $colour-primary;
+  border-radius: 50%;
+  color: $colour-white;
 }
-
-
-
-
 
 @mixin plats {
+  &__plat {
+    width: 100%;
+    height: 60px;
+    padding: 10px 15px 5px 15px;
+    transition: 500ms ease-out;
 
-            display: block;
-            position: relative;
-            border-radius: 10px;
-            background-color: $colour-white;
-            overflow: hidden;
-            @include shadow;
-            margin-top: 10px;
-           line-height: 18px;
-            
-        
-    &__plat{
-        width:100%;
-        height:60px;
-        padding:10px 15px 5px 15px;
-         transition: 500ms ease-out;
-        
-        
-        &__titre{
-            display:inline-block;
-            width:80%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap; 
-        }
-        
-        &__accomp{
-           
-            font-size: 1.4rem ;
-            display:inline-block;
-            width:80%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap; 
-            
-        }
-
-        &__prix{
-            font-size: 1.4rem ;
-            font-weight: 600;
-            color: lighten($shadow-color, 30%);
-            float: right;
-        }
-
-        
-          }
-
-    &__anim{
-            
-            position: absolute;
-            top:0;
-            right:0;
-            height: 100%;
-            background-color: $colour-tertiary;
-            width: 0%;
-            transition: 500ms ease-out;
-            
-            
-            &__icon{
-                position: absolute;
-                top:20px;
-                left:16.5px;
-                color: $colour-white;
-                font-size: 20px;
-               
-                
-                
-            }
-            
-            
-        } 
-    
-    
-         
-    &:hover{
-        
-        .carte__menu__choix__ref__plat{
-            width: 85%;
-            
-        }
-        .carte__menu__choix__ref__anim{
-            width: 15%;
-        
-            &__icon{
-              
-                
-                animation: check_rot 500ms ease-out;
-            }
-        }
-
-
+    &__titre {
+      display: inline-block;
+      width: 80%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
+
+    &__accomp {
+      font-size: 1.4rem;
+      display: inline-block;
+      width: 80%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__prix {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: lighten($shadow-color, 30%);
+      float: right;
+    }
+  }
+
+  &__anim {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: $colour-tertiary;
+    width: 0%;
+    transition: 500ms ease-out;
+
+    &__icon {
+      position: absolute;
+      top: 20px;
+      left: 16.5px;
+      color: $colour-white;
+      font-size: 20px;
+    }
+  }
+
+  &:hover {
+    .carte__menu__choix__ref__plat {
+      width: 85%;
+    }
+    .carte__menu__choix__ref__anim {
+      width: 15%;
+
+      &__icon {
+        animation: check_rot 500ms ease-out;
+      }
+    }
+  }
 }
 
+@mixin laptop-only {
+  @media screen and (min-width: map-get($breakpoints, laptop)) {
+    @content;
+  }
+}
 
+@mixin tablet-only {
+  @media screen and (min-width: map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
